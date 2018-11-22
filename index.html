@@ -37,18 +37,19 @@
       <div class="row">
         <!-- main contents -->
         <div class="col-lg-8 mb-1">
-          <div class="row row-no-padding px-1">
 
-            <!-- card -->
-            <div class="col-md-4 mt-1">
-              <div class="card card-body">
-                <img class="card-img-top" src="assets/graph/" alt="img">
-                <div class="card-body">
-                  <canvas></canvas>
+          <!-- search bar -->
+          <div class="col-12 pt-3 px-0">
+            <form>
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">&#128269;</span>
+                  </div>
+                  <input type="text" v-model="keyword" class="form-control" id="search" placeholder="Search...">
                 </div>
               </div>
-            </div><!-- card -->
-
+            </form>
           </div>
         </div>
 
@@ -79,8 +80,18 @@
             <button type="submit" class="btn btn-primary">Login</button>
             <button type="submit" class="btn btn-outline-info">Forgot password</button>
           </form>
-        </div>
 
+          <hr>
+
+          <div>
+            <h5>More information</h5>
+            <ul>
+              <li><a href="https://ecokamiken.synology.me">https://ecokamiken.synology.me</a></li>
+              <li><a href="https://ecokamiken.synology.me">https://ecokamiken.synology.me</a></li>
+              <li><a href="https://ecokamiken.synology.me">https://ecokamiken.synology.me</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -94,6 +105,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
   <script src="dist/main.js"></script>
+  <script src="src/common.js"></script><!-- webpack -->
 </body>
 
 </html>
