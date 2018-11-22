@@ -38,18 +38,32 @@
         <!-- main contents -->
         <div class="col-lg-8 mb-1">
 
-          <!-- search bar -->
-          <div class="col-12 pt-3 px-0">
-            <form>
-              <div class="form-group">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">&#128269;</span>
+          <div id="sites">
+            <!-- search bar -->
+            <div class="col-12 pt-3 px-0">
+              <form>
+                <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">&#128269;</span>
+                    </div>
+                    <input type="text" v-model="keyword" class="form-control" id="search" placeholder="Search...">
                   </div>
-                  <input type="text" v-model="keyword" class="form-control" id="search" placeholder="Search...">
                 </div>
+              </form>
+            </div>
+
+          </div><!-- sites -->
+
+          <div class="col-12">
+            <div class="row">
+              <div class="col-4">
               </div>
-            </form>
+              <div class="col-4">
+              </div>
+              <div class="col-4">
+              </div>
+            </div>
           </div>
         </div>
 
@@ -78,8 +92,15 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Login</button>
-            <button type="submit" class="btn btn-outline-info">Forgot password</button>
+            <button type="submit" class="btn btn-link">Forgot password</button>
           </form>
+
+          <hr>
+
+          <div class="text-center">
+            <p>or</p>
+            <button class="col-12 btn btn-outline-info">Create your account</button>
+          </div>
 
           <hr>
 

@@ -3,16 +3,18 @@ const vm = new Vue({
   data: {
     keyword: '',
     sites: [
-      {name: '上里建設', id: 0},
-      {name: '金久保', id: 1}
+      {id: 0, name: '上里建設', kana: 'かみさとけんせつ', roma: 'kamisatokensetsu'},
+      {id: 1, name: '金久保', kana: 'かなくぼ', roma: 'kanakubo'}
     ]
   },
   computed: {
     filteredSites: function() {
-      let sites = []
-      for(let i in this.sites) {
-        let site = this.sites[i]
-        if(sites.name.indexOf(this.keyword) !== -1) {
+      var sites = []
+      for(var i in this.sites) {
+        var site = this.sites[i]
+        if(site.name.indexOf(this.keyword) !== -1 ||
+        site.kana.indexOf(this.keyword) !== -1 ||
+        site.roma.indexOf(this.keyword) !== -1) {
           sites.push(site)
         }
       }
