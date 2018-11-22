@@ -38,7 +38,7 @@
         <!-- main contents -->
         <div class="col-lg-8 mb-1">
 
-          <div id="sites">
+          <div id="site-table">
             <!-- search bar -->
             <div class="col-12 pt-3 px-0">
               <form>
@@ -53,18 +53,25 @@
               </form>
             </div>
 
-          </div><!-- sites -->
-
-          <div class="col-12">
-            <div class="row">
-              <div class="col-4">
-              </div>
-              <div class="col-4">
-              </div>
-              <div class="col-4">
-              </div>
+            <div class="col-12">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">name</th>
+                    <th scope="col">wattage</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="site in filteredSites">
+                    <td v-text="site.id"></td>
+                    <td v-text="site.name"></td>
+                    <td v-text="site.wattage"></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-          </div>
+          </div><!-- site-table -->
         </div>
 
         <!-- Login form -->

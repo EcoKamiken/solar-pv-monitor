@@ -1,10 +1,15 @@
 const vm = new Vue({
-  el: '#sites',
+  el: '#site-table',
   data: {
     keyword: '',
     sites: [
-      {id: 0, name: '上里建設', kana: 'かみさとけんせつ', roma: 'kamisatokensetsu'},
-      {id: 1, name: '金久保', kana: 'かなくぼ', roma: 'kanakubo'}
+      {id: 0, name: '上里建設', kana: 'かみさとけんせつ', roma: 'kamisatokensetsu', wattage: 1000},
+      {id: 1, name: '金久保', kana: 'かなくぼ', roma: 'kanakubo', wattage: 1000},
+      {id: 2, name: '金久保', kana: 'かなくぼ', roma: 'kanakubo', wattage: 1000},
+      {id: 3, name: '金久保', kana: 'かなくぼ', roma: 'kanakubo', wattage: 1000},
+      {id: 4, name: '金久保', kana: 'かなくぼ', roma: 'kanakubo', wattage: 1000},
+      {id: 5, name: '金久保', kana: 'かなくぼ', roma: 'kanakubo', wattage: 1000},
+      {id: 6, name: '金久保', kana: 'かなくぼ', roma: 'kanakubo', wattage: 1000},
     ]
   },
   computed: {
