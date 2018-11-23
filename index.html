@@ -56,7 +56,7 @@
             <div class="row">
 
               <!-- card -->
-              <div class="col-sm-6 col-md-4 my-2">
+              <div v-for="site in filteredSites" class="col-sm-6 col-md-4 my-2">
                 <div class="card h-100">
                   <div class="card-body text-center">
                     <img src="assets/graph/graph.png" alt="graph" width="75%">
@@ -64,17 +64,17 @@
                       <div class="col-6">
                         <small class="text-info">
                           発電量<br>
-                          1023.33kWh
+                          <span v-text="site.wattage"></span>kWh
                         </small>
                       </div>
                       <div class="col-6">
                         <small class="text-info">
                           前日比<br>
-                          +21.31kWh
+                          <span v-text="site.wattage"></span>kWh
                         </small>
                       </div>
                       <div class="col-12 mt-3 mb-0">
-                        <h6>株式会社上里建設電所</h6>
+                        <h6 v-text="site.name"></h6>
                       </div>
                     </div>
                   </div>
