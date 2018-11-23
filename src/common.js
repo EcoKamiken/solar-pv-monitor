@@ -114,6 +114,9 @@ const vm = new Vue({
         site.kana.indexOf(this.keyword) !== -1 ||
         site.roma.toLowerCase().indexOf(this.keyword.toLowerCase()) !== -1) {
           sites.push(site)
+          if(sites.length === 9) {
+            break
+          }
         }
       }
       return sites
