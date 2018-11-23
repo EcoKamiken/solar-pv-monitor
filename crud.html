@@ -53,36 +53,24 @@
               </form>
             </div>
 
-            <div class="row">
-
-              <!-- card -->
-              <div class="col-sm-6 col-md-4 my-2">
-                <div class="card h-100">
-                  <div class="card-body text-center">
-                    <img src="assets/graph/graph.png" alt="graph" width="75%">
-                    <div class="row mt-3">
-                      <div class="col-6">
-                        <small class="text-info">
-                          発電量<br>
-                          1023.33kWh
-                        </small>
-                      </div>
-                      <div class="col-6">
-                        <small class="text-info">
-                          前日比<br>
-                          +21.31kWh
-                        </small>
-                      </div>
-                      <div class="col-12 mt-3 mb-0">
-                        <h6>株式会社上里建設電所</h6>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div><!-- card -->
-
+            <div class="col-12 px-0">
+              <table class="table table-bordered">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">name</th>
+                    <th scope="col">wattage</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="site in filteredSites">
+                    <td v-text="site.id"></td>
+                    <td v-text="site.name"></td>
+                    <td v-text="site.wattage"></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-
           </div><!-- site-table -->
         </div>
 
@@ -126,8 +114,9 @@
           <div>
             <h5>More information</h5>
             <ul>
-              <li>株式会社上里建設 - <a href="https://kamiken.info">https://kamiken.info</a></li>
-              <li>発電量計β - <a href="https://ecokamiken.synology.me">https://ecokamiken.synology.me</a></li>
+              <li><a href="https://ecokamiken.synology.me">https://ecokamiken.synology.me</a></li>
+              <li><a href="https://ecokamiken.synology.me">https://ecokamiken.synology.me</a></li>
+              <li><a href="https://ecokamiken.synology.me">https://ecokamiken.synology.me</a></li>
             </ul>
           </div>
         </div>
